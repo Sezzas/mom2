@@ -10,10 +10,10 @@ class Game extends Model
     use HasFactory;
 
     // Fält i tabell
-    protected $fillable 0 [
+    protected $fillable = [
         "name",
         "hours",
         "finished"
-    ]
+    ];
 
 }

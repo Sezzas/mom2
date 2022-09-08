@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,25 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// GET
-Route::get("test", function() {
-    return response()->json(['message' => 'GET fungerar']);
-});
-
-// POST
-Route::post("test", function() {
-    return response()->json(['message' => 'POST fungerar']);
-});
-
-// PUT
-Route::put("test", function() {
-    return response()->json(['message' => 'PUT fungerar']);
-});
-
-// DELETE
-Route::delete("test", function() {
-    return response()->json(['message' => 'DELETE fungerar']);
-});
+// Hämtar automatiskt information om anrop
+Route::resource('games', GameController::class);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
