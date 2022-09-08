@@ -98,6 +98,23 @@ class GameController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Lagra spelets ID i variabel
+        $game = Game::find($id);
+
+        // Kontroll om ID existerar
+        if($game != null) {
+
+            // Radera spel
+            $game->delete();
+            return response()->json([
+                'Spel raderat.'
+            ]);
+        } else {
+
+            // Skickar felmeddelande om ID ej existerar
+            return response()->json([
+                'Spel hittades ej.'
+            ], 404);
+        }
     }
 }
