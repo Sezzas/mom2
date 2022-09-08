@@ -45,7 +45,21 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        //
+        // Lagra spelets ID i variabel
+        $game = Game::find($id);
+        
+        // Kontroll om ID existerar
+        if($game != null) {
+
+            // Returnera specifikt spel
+            return Game::find($id);
+        } else {
+
+            // Skickar felmeddelande om ID ej existerar
+            return response()->json([
+                'Spel hittades ej.'
+            ], 404);
+        }
     }
 
     /**
