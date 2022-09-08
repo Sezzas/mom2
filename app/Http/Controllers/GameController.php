@@ -26,6 +26,13 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
+        // Validera input
+        $request->validate([
+            'name' => ' required',
+            'hours' => 'required',
+            'finished' => 'required'
+        ]);
+
         // Lägga till spel
         return Game::create($request->all());
     }
