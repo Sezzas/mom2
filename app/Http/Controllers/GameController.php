@@ -71,7 +71,23 @@ class GameController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Lagra spelets ID i variabel
+        $game = Game::find($id);
+
+        // Kontroll om ID existerar
+        if($game != null) {
+
+            // Uppdatera information
+            $game->update($request->all());
+            return $game;
+
+        } else {
+
+            // Skickar felmeddelande om ID ej existerar
+            return response()->json([
+                'Spel hittades ej.'
+            ], 404);
+        }
     }
 
     /**
