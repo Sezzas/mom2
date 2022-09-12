@@ -31,7 +31,7 @@ För att använda webbtjänsten krävs en klient att testköra i som kan använd
 | ----- | -------- | ----------- |
 | GET | /api/games | Hämtar information om alla spel |
 | GET | /api/games/{id} | Hämtar information om spelet som matchar angett ID |
-| GET | /api/games/search/name/{namn/del av namn} | Sökfunktion för API:t. Hämtar alla spel vars namn matchar sökningen på något vis. |
+| GET | /api/games/search/name/{namn/del av namn} | Sökfunktion för API:t. Hämtar alla spel vars namn matchar sökningen på något vis |
 | POST | /api/games | Lagrar information om ett nytt spel *(kräver att information skickas med t.ex. JSON-format)* |
 | PUT | /api/games/{id} | Uppdaterar information om ett spel |
 | DELETE | /api/games/{id} | Raderar ett spel |
