@@ -77,6 +77,13 @@ class GameController extends Controller
         // Kontroll om ID existerar
         if($game != null) {
 
+            // Validera input
+            $request->validate([
+            'name' => ' required',
+            'hours' => 'required',
+            'finished' => 'required'
+        ]);
+
             // Uppdatera information
             $game->update($request->all());
             return $game;
