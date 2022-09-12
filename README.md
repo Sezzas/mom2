@@ -28,6 +28,7 @@ För att använda webbtjänsten krävs en klient att testköra i som kan använd
 
 ### Sökvägar
 | Metod | Ändpunkt | Beskrivning |
+| ----- | -------- | ----------- |
 | GET | /api/games | Hämtar information om alla spel |
 | GET | /api/games/{id} | Hämtar information om spelet som matchar angett ID |
 | POST | /api/games | Lagrar information om ett nytt spel *(kräver att information skickas med t.ex. JSON-format)* |
