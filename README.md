@@ -6,7 +6,17 @@ Webbtjänsten har funktioner för att hämta, uppdatera, lägga till och radera 
 
 ### Egen server
 Filerna i detta repository kan klonas ner för att själv användas. Se till att ha Laravel installerat och en databashanterare. En databas med tillhörande användare
-behöver skapas och inställningarna till denna databas skrivs in i filen *.env*. Använd sedan `php artisan migrate` för att skapa tabellerna för databasen.
+behöver skapas och inställningarna till denna databas skrivs in i filen *.env*. Använd sedan `php artisan migrate` för att skapa tabellen för databasen.
+
+Såhär ska tabellen se ut:
+| Kolumn | Beskrivning |
+| ------ | ----------- |
+| id | bigint(20) |
+| name | varchar(255) |
+| hours | int(11) |
+| finished | tinyint(1) |
+| created_at | timestamp |
+| updated_at | timestamp |
 
 ### Live-server
 Webbtjänsten har laddats upp till en liveserver med Heroku. Här kan man direkt interagera med API:t och prova olika funktioner.
