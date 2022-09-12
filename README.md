@@ -37,7 +37,7 @@ För att använda webbtjänsten krävs en klient att testköra i som kan använd
 | DELETE | /api/games/{id} | Raderar ett spel |
 
 ### JSON-format
-Vid uppdatering och lagring av data kan man behöva skicka med ett objekt i JSON-format. De formas då på följande vis:
+Vid uppdatering och lagring av data kan man behöva skicka med ett objekt i JSON-format. De struktureras då på följande vis:
 ```
 {
     "name" : "Namn",
