@@ -124,4 +124,11 @@ class GameController extends Controller
             ], 404);
         }
     }
+
+    // Sökfunktion i API
+    public function searchName($name) {
+
+        // Hämta information om spel där en del av namnet matchar
+        return Game::where('name', 'like', '%' . $name . '%')->get();
+    }
 }

@@ -18,6 +18,9 @@ use App\Http\Controllers\GameController;
 // Hämtar automatiskt information om anrop
 Route::resource('games', GameController::class);
 
+// Sökfunktion för API
+Route::get('/games/search/name/{name}', [GameController::class, 'searchName']);
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
