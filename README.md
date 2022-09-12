@@ -21,7 +21,7 @@ Såhär ska tabellen se ut:
 ### Live-server
 Webbtjänsten har laddats upp till en liveserver med Heroku. Här kan man direkt interagera med API:t och prova olika funktioner genom att kopiera dess URL.
 
-**Länk:** x
+**Länk:** https://fathomless-wave-65113.herokuapp.com/
 
 ## Användning av webbtjänst
 För att använda webbtjänsten krävs en klient att testköra i som kan använda metoderna GET, POST, PUT och DELETE. Information inuti { } motsvarar din egna input.
