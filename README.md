@@ -34,3 +34,14 @@ För att använda webbtjänsten krävs en klient att testköra i som kan använd
 | POST | /api/games | Lagrar information om ett nytt spel *(kräver att information skickas med t.ex. JSON-format)* |
 | PUT | /api/games/{id} | Uppdaterar information om ett spel |
 | DELETE | /api/games/{id} | Raderar ett spel |
+
+### JSON-format
+Vid uppdatering och lagring av data kan man behöva skicka med ett objekt i JSON-format. De formas då på följande vis:
+```
+{
+    "name" : "Namn",
+    "hours" : 2,
+    "finished" : true/false
+}
+```
+*Observera att alla fält måste skickas med även vid uppdatering.*
